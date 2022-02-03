@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+    }
+}
+rootProject.name = "MusicVisualizerTaskerPlugin"
+include ':app'
+
+gradle.ext.useMusicVisualizerApiLocalProject = properties.containsKey('MUSIC_VISUALIZER_API_TARGET_APP_PACKAGE_NAME') && "${MUSIC_VISUALIZER_API_TARGET_APP_PACKAGE_NAME}".toString() != ''
+
+if (gradle.ext.useMusicVisualizerApiLocalProject) {
+    include ':musicvisualizerapi'
+    project(':musicvisualizerapi').projectDir = new File('../MusicVisualizerAPI/library')
+}

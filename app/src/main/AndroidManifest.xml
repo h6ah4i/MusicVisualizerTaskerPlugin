@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.h6ah4i.android.tasker.plugin.music_visualizer"
+    android:installLocation="internalOnly">
+
+    <!-- permissions -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!-- features -->
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="true" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat"
+        android:allowBackup="false">
+
+        <activity
+            android:name="com.h6ah4i.android.tasker.plugin.musicvisualizer.actions.PlayConfigAction"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/action_play"
+            android:theme="@style/DialogTrampolineActivity"
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            tools:ignore="ExportedActivity">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.h6ah4i.android.tasker.plugin.musicvisualizer.actions.PauseConfigAction"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/action_pause"
+            android:theme="@style/DialogTrampolineActivity"
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            tools:ignore="ExportedActivity">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.h6ah4i.android.tasker.plugin.musicvisualizer.actions.TogglePauseConfigAction"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/action_toggle_pause"
+            android:theme="@style/DialogTrampolineActivity"
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            tools:ignore="ExportedActivity">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.h6ah4i.android.tasker.plugin.musicvisualizer.actions.PreviousConfigAction"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/action_previous"
+            android:theme="@style/DialogTrampolineActivity"
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            tools:ignore="ExportedActivity">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.h6ah4i.android.tasker.plugin.musicvisualizer.actions.NextConfigAction"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/action_next"
+            android:theme="@style/DialogTrampolineActivity"
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            tools:ignore="ExportedActivity">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.h6ah4i.android.tasker.plugin.musicvisualizer.actions.ShuffleConfigAction"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/action_shuffle"
+            android:theme="@style/DialogTrampolineActivity"
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            tools:ignore="ExportedActivity">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.h6ah4i.android.tasker.plugin.musicvisualizer.actions.RepeatConfigAction"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/action_repeat"
+            android:theme="@style/DialogTrampolineActivity"
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            tools:ignore="ExportedActivity">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.h6ah4i.android.tasker.plugin.musicvisualizer.actions.MainAppSwitchRendererConfigAction"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/action_main_app_switch_renderer"
+            android:theme="@style/DialogTrampolineActivity"
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            tools:ignore="ExportedActivity">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.h6ah4i.android.tasker.plugin.musicvisualizer.actions.LiveWallpaperSwitchRendererConfigAction"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/action_live_wallpaper_switch_renderer"
+            android:theme="@style/DialogTrampolineActivity"
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            tools:ignore="ExportedActivity">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.h6ah4i.android.tasker.plugin.musicvisualizer.actions.ScreensaverSwitchRendererConfigAction"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/action_screen_saver_switch_renderer"
+            android:theme="@style/DialogTrampolineActivity"
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            tools:ignore="ExportedActivity">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.h6ah4i.android.tasker.plugin.musicvisualizer.actions.VisualizerSwitchRendererTrampolineActivity"
+            android:theme="@style/DialogTrampolineActivity"
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="${taskerCallbackScheme}"
+                    android:host="visualizer-switch-renderer-trampoline" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

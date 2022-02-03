@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Music Visualizer Tasker Plugin</string>
+
+    <!-- Tasker Actions -->
+    <string name="action_play">Play</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_toggle_pause">Toggle Play/Pause</string>
+    <string name="action_previous">Previous Track</string>
+    <string name="action_next">Next Track</string>
+    <string name="action_shuffle">Shuffle</string>
+    <string name="action_repeat">Repeat</string>
+    <string name="action_main_app_switch_renderer">Switch Renderer (Main app)</string>
+    <string name="action_live_wallpaper_switch_renderer">Switch Renderer (LWP)</string>
+    <string name="action_screen_saver_switch_renderer">Switch Renderer (Screensaver)</string>
+
+    <!-- Dialog titles -->
+    <string name="dialog_title_shuffle_mode">Shuffle mode</string>
+    <string name="dialog_title_repeat_mode">Repeat mode</string>
+    <string name="dialog_title_renderer_type">Renderer</string>
+
+    <string name="tasker_plugin_input_label_shuffle_mode">Shuffle mode</string>
+    <string name="tasker_plugin_input_label_repeat_mode">Repeat mode</string>
+    <string name="tasker_plugin_input_label_renderer_type">Renderer</string>
+
+
+    <!-- Shuffle modes -->
+    <string name="shuffle_mode_display_name_toggle">Toggle</string>
+    <string name="shuffle_mode_display_name_on">On</string>
+    <string name="shuffle_mode_display_name_off">Off</string>
+
+    <!-- Repeat modes -->
+    <string name="repeat_mode_display_name_rotate">Rotate</string>
+    <string name="repeat_mode_display_name_all">All</string>
+    <string name="repeat_mode_display_name_one">One</string>
+    <string name="repeat_mode_display_name_disabled">Disabled</string>
+
+    <!-- Renderers -->
+    <string name="renderer_randomized">\"Randomized\"</string>
+    <string name="renderer_album_art">Cover Art</string>
+    <string name="renderer_waveform">Waveform</string>
+    <string name="renderer_shiny_particles">Shiny Particles</string>
+    <string name="renderer_noise_flow">Noise Flow</string>
+    <string name="renderer_colorful_orb">Colorful Orb</string>
+    <string name="renderer_simple_bars">Simple Bars</string>
+    <string name="renderer_heart_beats">Heart Beats</string>
+    <string name="renderer_laser">Laser</string>
+    <string name="renderer_digital_equalizer">Digital Equalizer</string>
+    <string name="renderer_hex_tiles">Hex Tiles</string>
+    <string name="renderer_energy_sphere">Energy Sphere</string>
+
+    <string name="switch_renderer_randomly">Switch randomly</string>
+    <string name="switch_renderer_sequentially">Switch sequentially</string>
+    <string name="switch_renderer_open_selector_dialog">Open selector dialog</string>
+
+</resources>

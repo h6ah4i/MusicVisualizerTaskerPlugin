@@ -1,0 +1,63 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 32
+
+    defaultConfig {
+        applicationId "com.h6ah4i.android.tasker.plugin.music_visualizer"
+        minSdkVersion 23
+        targetSdkVersion 32
+        versionCode 2
+        versionName "2.0.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'TASKER_CALLBACK_SCHEME', "\"music-visualizer-tasker-plugin\""
+            manifestPlaceholders = [taskerCallbackScheme: "music-visualizer-tasker-plugin"]
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'TASKER_CALLBACK_SCHEME', "\"music-visualizer-tasker-plugin-debug\""
+            manifestPlaceholders = [taskerCallbackScheme: "music-visualizer-tasker-plugin-debug"]
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+}
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:1.4.1"
+    implementation 'androidx.activity:activity-ktx:1.4.0'
+    implementation 'androidx.fragment:fragment-ktx:1.4.1'
+    implementation 'com.joaomgcd:taskerpluginlibrary:0.4.2'
+    if (gradle.ext.useMusicVisualizerApiLocalProject) {
+        implementation project(':musicvisualizerapi')
+    } else {
+        implementation 'com.h6ah4i.android.musicvisualizerapi:musicvisualizerapi:1.0.0'
+    }
+}
+

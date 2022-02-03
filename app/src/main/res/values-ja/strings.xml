@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Music Visualizer Tasker Plugin</string>
+
+    <!-- Tasker Actions -->
+    <string name="action_play">再生</string>
+    <string name="action_pause">一時停止</string>
+    <string name="action_toggle_pause">再生/一時停止</string>
+    <string name="action_previous">前の曲</string>
+    <string name="action_next">次の曲</string>
+    <string name="action_shuffle">シャッフル</string>
+    <string name="action_repeat">リピート</string>
+    <string name="action_main_app_switch_renderer">レンダラーの変更 (メインアプリ)</string>
+    <string name="action_live_wallpaper_switch_renderer">レンダラーの変更 (ライブ壁紙)</string>
+    <string name="action_screen_saver_switch_renderer">レンダラーの変更 (スクリーンセーバー)</string>
+
+    <!-- Dialog titles -->
+    <string name="dialog_title_shuffle_mode">シャッフル方式</string>
+    <string name="dialog_title_repeat_mode">リピート方式</string>
+    <string name="dialog_title_renderer_type">レンダラー</string>
+
+    <string name="tasker_plugin_input_label_shuffle_mode">シャッフル方式</string>
+    <string name="tasker_plugin_input_label_repeat_mode">リピート方式</string>
+    <string name="tasker_plugin_input_label_renderer_type">レンダラー</string>
+
+
+    <!-- Shuffle modes -->
+    <string name="shuffle_mode_display_name_toggle">トグル</string>
+    <string name="shuffle_mode_display_name_on">有効</string>
+    <string name="shuffle_mode_display_name_off">無効</string>
+
+    <!-- Repeat modes -->
+    <string name="repeat_mode_display_name_rotate">ローテーション</string>
+    <string name="repeat_mode_display_name_all">全曲リピート</string>
+    <string name="repeat_mode_display_name_one">単曲リピート</string>
+    <string name="repeat_mode_display_name_disabled">無効</string>
+
+    <!-- Renderers -->
+    <string name="renderer_randomized">\"Randomized\"</string>
+    <string name="renderer_album_art">Cover Art</string>
+    <string name="renderer_waveform">Waveform</string>
+    <string name="renderer_shiny_particles">Shiny Particles</string>
+    <string name="renderer_noise_flow">Noise Flow</string>
+    <string name="renderer_colorful_orb">Colorful Orb</string>
+    <string name="renderer_simple_bars">Simple Bars</string>
+    <string name="renderer_heart_beats">Heart Beats</string>
+    <string name="renderer_laser">Laser</string>
+    <string name="renderer_digital_equalizer">Digital Equalizer</string>
+    <string name="renderer_hex_tiles">Hex Tiles</string>
+    <string name="renderer_energy_sphere">Energy Sphere</string>
+
+    <string name="switch_renderer_randomly">ランダムに切り替え</string>
+    <string name="switch_renderer_sequentially">順番に切り替え</string>
+    <string name="switch_renderer_open_selector_dialog">選択ダイアログ表示</string>
+
+</resources>
