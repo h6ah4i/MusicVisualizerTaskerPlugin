@@ -56,7 +56,7 @@ enum class SwitchRendererMode(
 //
 @TaskerInputRoot
 open class SwitchRendererCommandInput @JvmOverloads constructor(
-    @field:TaskerInputField(key = "mode", labelResId = R.string.tasker_plugin_input_label_renderer_type)
+    @field:TaskerInputField(key = "mode", labelResIdName = "tasker_plugin_input_label_renderer_type")
     var mode: String = SwitchRendererMode.OpenSelectorDialog.internalName,
 )
 

@@ -36,7 +36,7 @@ enum class RepeatMode(
 
 @TaskerInputRoot
 class RepeatCommandInput @JvmOverloads constructor(
-    @field:TaskerInputField(key = "mode", labelResId = R.string.tasker_plugin_input_label_repeat_mode)
+    @field:TaskerInputField(key = "mode", labelResIdName = "tasker_plugin_input_label_repeat_mode")
     var mode: String = RepeatMode.TOGGLE.internalName,
 )
 

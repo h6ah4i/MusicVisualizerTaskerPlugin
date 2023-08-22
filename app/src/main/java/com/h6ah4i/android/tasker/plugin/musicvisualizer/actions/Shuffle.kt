@@ -35,7 +35,7 @@ enum class ShuffleMode(
 
 @TaskerInputRoot
 class ShuffleCommandInput @JvmOverloads constructor(
-    @field:TaskerInputField(key = "mode", labelResId = R.string.tasker_plugin_input_label_shuffle_mode)
+    @field:TaskerInputField(key = "mode", labelResIdName = "tasker_plugin_input_label_shuffle_mode")
     var mode: String = ShuffleMode.TOGGLE.internalName,
 )
 
