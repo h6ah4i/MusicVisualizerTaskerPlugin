@@ -14,3 +14,7 @@
 
 -keepattributes LineNumberTable,SourceFile
 -renamesourcefileattribute SourceFile
+
+-keepclassmembernames class com.joaomgcd.taskerpluginlibrary.config.TaskerPluginConfig {
+    *;
+}
