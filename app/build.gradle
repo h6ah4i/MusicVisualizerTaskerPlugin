@@ -11,7 +11,7 @@ android {
         applicationId "com.h6ah4i.android.tasker.plugin.music_visualizer"
         minSdkVersion 23
         targetSdkVersion 32
-        versionCode 2
+        versionCode 4
         versionName "2.0.0"
     }
 
@@ -44,7 +44,6 @@ android {
     }
 
     buildFeatures {
-        viewBinding true
         dataBinding true
     }
 }

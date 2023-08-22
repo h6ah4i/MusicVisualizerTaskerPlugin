@@ -2,7 +2,6 @@ package com.h6ah4i.android.tasker.plugin.musicvisualizer.actions
 
 import android.content.Context
 import android.content.Intent
-import androidx.core.app.ServiceCompat
 import androidx.core.content.ContextCompat
 import com.h6ah4i.android.musicvisualizerapi.MusicVisualizerAPI
 import com.joaomgcd.taskerpluginlibrary.action.TaskerPluginRunnerAction

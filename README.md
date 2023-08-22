@@ -9,7 +9,7 @@ This project is the official [Music Visualizer](https://play.google.com/store/ap
 License
 ---
 
-This library is licensed under [The GNU General Public License, Version 3.0](https://www.gnu.org/licenses/gpl-3.0.html).
+This project is licensed under [The GNU General Public License, Version 3.0](https://www.gnu.org/licenses/gpl-3.0.html).
 
 See [`LICENSE`](LICENSE) for full of the license text.
 
