@@ -52,7 +52,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:1.4.1"
     implementation 'androidx.activity:activity-ktx:1.4.0'
     implementation 'androidx.fragment:fragment-ktx:1.4.1'
-    implementation 'com.joaomgcd:taskerpluginlibrary:0.4.2'
+    implementation 'com.joaomgcd:taskerpluginlibrary:0.4.7'
     if (gradle.ext.useMusicVisualizerApiLocalProject) {
         implementation project(':musicvisualizerapi')
     } else {
