@@ -29,7 +29,7 @@ enum class ShuffleMode(
     ;
 
     companion object {
-        fun fromInternalName(name: String) = values().find { it.internalName == name }!!
+        fun fromInternalName(name: String) = entries.find { it.internalName == name }!!
     }
 }
 
@@ -59,8 +59,8 @@ class ShuffleModePickerDialogFragment: TaskerPluginConfigDialogFragment() {
     private val viewModel: ShuffleConfigActivityViewModel by activityViewModels()
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val valueItems = ShuffleMode.values().map { it.internalName }.toTypedArray()
-        val displayNameItems = ShuffleMode.values().map { getString(it.displayNameResId) }.toTypedArray()
+        val valueItems = ShuffleMode.entries.map { it.internalName }.toTypedArray()
+        val displayNameItems = ShuffleMode.entries.map { getString(it.displayNameResId) }.toTypedArray()
         val checkedItem = valueItems.indexOf(viewModel.mode)
 
         return AlertDialog.Builder(requireContext())

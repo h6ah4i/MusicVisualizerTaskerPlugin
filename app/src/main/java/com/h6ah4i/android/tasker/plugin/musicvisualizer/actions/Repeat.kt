@@ -30,7 +30,7 @@ enum class RepeatMode(
     ;
 
     companion object {
-        fun fromInternalName(name: String) = values().find { it.internalName == name }!!
+        fun fromInternalName(name: String) = entries.find { it.internalName == name }!!
     }
 }
 
@@ -60,8 +60,8 @@ class RepeatModePickerDialogFragment: TaskerPluginConfigDialogFragment() {
     private val viewModel: RepeatConfigActivityViewModel by activityViewModels()
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val valueItems = RepeatMode.values().map { it.internalName }.toTypedArray()
-        val displayNameItems = RepeatMode.values().map { getString(it.displayNameResId) }.toTypedArray()
+        val valueItems = RepeatMode.entries.map { it.internalName }.toTypedArray()
+        val displayNameItems = RepeatMode.entries.map { getString(it.displayNameResId) }.toTypedArray()
         val checkedItem = valueItems.indexOf(viewModel.mode)
 
         return AlertDialog.Builder(requireContext())

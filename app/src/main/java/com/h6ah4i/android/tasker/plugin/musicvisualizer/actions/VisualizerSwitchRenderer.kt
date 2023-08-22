@@ -47,7 +47,7 @@ enum class SwitchRendererMode(
     ;
 
     companion object {
-        fun fromInternalName(name: String) = values().find { it.internalName == name } ?: throw IllegalArgumentException("Unknown renderer name specified: $name")
+        fun fromInternalName(name: String) = entries.find { it.internalName == name } ?: throw IllegalArgumentException("Unknown renderer name specified: $name")
     }
 }
 
@@ -133,8 +133,8 @@ class SwitchRendererModePickerDialogFragment: TaskerPluginConfigDialogFragment()
     private val viewModel: SwitchRendererConfigActivityViewModel by activityViewModels()
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val valueItems = SwitchRendererMode.values()
-        val displayNameItems = SwitchRendererMode.values().map { getString(it.displayNameResId) }.toTypedArray()
+        val valueItems = SwitchRendererMode.entries
+        val displayNameItems = SwitchRendererMode.entries.map { getString(it.displayNameResId) }.toTypedArray()
         val checkedItem = valueItems.indexOf(viewModel.type)
 
         return AlertDialog.Builder(requireContext())
@@ -176,7 +176,7 @@ abstract class AbstractSwitchRendererConfigAction<TRunner: TaskerPluginRunner<Sw
         val defaultType = if (supportsOpenSelectorDialog) SwitchRendererMode.OpenSelectorDialog else SwitchRendererMode.Randomized
 
         viewModel.supportsOpenSelectorDialog = supportsOpenSelectorDialog
-        viewModel.type = SwitchRendererMode.values().find { it.internalName == input.regular.mode } ?: defaultType
+        viewModel.type = SwitchRendererMode.entries.find { it.internalName == input.regular.mode } ?: defaultType
     }
 }
 
